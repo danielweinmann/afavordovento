@@ -3,8 +3,6 @@ h2= @chart.birth_date
 h3= "#{Chart.human_attribute_name(:ruling_number)}: #{@chart.ruling_number}"
 h3= "#{Chart.human_attribute_name(:day_number)}: #{@chart.day_number}"
 
-h3= Chart.human_attribute_name(:birth_chart)
-
 = link_to 'Editar', edit_chart_path(@chart)
 '|
 = link_to 'Voltar', charts_path
