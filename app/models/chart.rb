@@ -5,6 +5,14 @@ class Chart < ApplicationRecord
   store_accessor :birth_chart 
   before_save :calculate_numbers
 
+  def chart_number(number)
+    numbers = []
+    (self.birth_chart[number.to_s].to_i || 0).times do
+      numbers << number.to_s
+    end
+    numbers.join("")
+  end
+
   private
 
   def digits_sum(digits)

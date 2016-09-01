@@ -3,6 +3,26 @@ h2= @chart.birth_date
 h3= "#{Chart.human_attribute_name(:ruling_number)}: #{@chart.ruling_number}"
 h3= "#{Chart.human_attribute_name(:day_number)}: #{@chart.day_number}"
 
+br
+h2= Chart.human_attribute_name(:birth_chart)
+br
+
+table.birth-chart.text-center
+  tr
+    td= @chart.chart_number(3)
+    td= @chart.chart_number(6)
+    td= @chart.chart_number(9)
+  tr
+    td= @chart.chart_number(2)
+    td= @chart.chart_number(5)
+    td= @chart.chart_number(8)
+  tr
+    td= @chart.chart_number(1)
+    td= @chart.chart_number(4)
+    td= @chart.chart_number(7)
+
+br
+
 = link_to 'Editar', edit_chart_path(@chart)
 '|
 = link_to 'Voltar', charts_path
