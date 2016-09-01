@@ -1,0 +1,12 @@
+= form_for @chart do |f|
+  - if @chart.errors.any?
+    #error_explanation
+      h2 = I18n.t("errors.messages.not_saved", count: @chart.errors.count, resource: @chart.class.model_name.human.downcase)
+      ul
+        - @chart.errors.full_messages.each do |message|
+          li = message
+  = f.label :name
+  = f.text_field :name
+  = f.label :birth_date
+  = f.date_field :birth_date
+  .actions = f.submit
