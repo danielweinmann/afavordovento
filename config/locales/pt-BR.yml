@@ -27,7 +27,8 @@
       chart:
         name: Nome
         birth_date: Data de nascimento
-        birth_chart: Quadro do nascimento
+        is_female: Sexo
+        birth_chart: Mapa do nascimento
         ruling_number: Número regente
         day_number: Número do dia
   flash:

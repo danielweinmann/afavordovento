@@ -17,14 +17,15 @@ ActiveRecord::Schema.define(version: 20160901152742) do
   enable_extension "hstore"
 
   create_table "charts", force: :cascade do |t|
-    t.integer  "user_id",       null: false
-    t.text     "name",          null: false
-    t.date     "birth_date",    null: false
-    t.hstore   "birth_chart",   null: false
-    t.integer  "ruling_number", null: false
-    t.integer  "day_number",    null: false
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.integer  "user_id",                      null: false
+    t.text     "name",                         null: false
+    t.date     "birth_date",                   null: false
+    t.boolean  "is_female",     default: true, null: false
+    t.hstore   "birth_chart",                  null: false
+    t.integer  "ruling_number",                null: false
+    t.integer  "day_number",                   null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.index ["user_id"], name: "index_charts_on_user_id", using: :btree
   end
 

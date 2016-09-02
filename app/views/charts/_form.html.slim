@@ -9,4 +9,9 @@
   = f.text_field :name
   = f.label :birth_date
   = f.date_field :birth_date
+  = f.label :is_female
+  = f.radio_button :is_female, true, checked: @chart.is_female?
+  = f.label "Feminino"
+  = f.radio_button :is_female, false, checked: !@chart.is_female?
+  = f.label "Masculino"
   .actions = f.submit
