@@ -1,19 +1,20 @@
 .birth-chart
-  width: auto
-  tr
-    td
-      background: $white
-      width: 100px
-      height: 100px
-      font-size: 2rem
-      border: 1px solid $dark-gray
+  table
+    width: auto
+    tr
+      td
+        background: $white
+        width: 100px
+        height: 100px
+        font-size: 2rem
+        border: 1px solid $dark-gray
+        &:first-child
+          border-left: none
+        &:last-child
+          border-right: none
       &:first-child
-        border-left: none
+        td
+          border-top: none
       &:last-child
-        border-right: none
-    &:first-child
-      td
-        border-top: none
-    &:last-child
-      td
-        border-bottom: none
+        td
+          border-bottom: none

@@ -8,22 +8,27 @@ br
 h2= Chart.human_attribute_name(:birth_chart)
 br
 
-table.birth-chart.text-center
-  tr
-    td= @chart.chart_number(3)
-    td= @chart.chart_number(6)
-    td= @chart.chart_number(9)
-  tr
-    td= @chart.chart_number(2)
-    td= @chart.chart_number(5)
-    td= @chart.chart_number(8)
-  tr
-    td= @chart.chart_number(1)
-    td= @chart.chart_number(4)
-    td= @chart.chart_number(7)
+.birth-chart
+  table.text-center
+    tr
+      td= @chart.chart_number(3)
+      td= @chart.chart_number(6)
+      td= @chart.chart_number(9)
+    tr
+      td= @chart.chart_number(2)
+      td= @chart.chart_number(5)
+      td= @chart.chart_number(8)
+    tr
+      td= @chart.chart_number(1)
+      td= @chart.chart_number(4)
+      td= @chart.chart_number(7)
+
+br
+
+h3= "Arrow of determination: #{@chart.arrow_of_determination?}"
 
 br
 
 = link_to 'Editar', edit_chart_path(@chart)
-' |
+|  | 
 = link_to 'Voltar', charts_path

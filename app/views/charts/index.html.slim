@@ -9,19 +9,17 @@ table
       th= Chart.human_attribute_name(:day_number)
       th
       th
-      th
 
   tbody
     - @charts.each do |chart|
       tr
-        td= chart.name
+        td= link_to chart.name, chart
         td= l chart.birth_date
         td= chart.ruling_number
         td= chart.day_number
-        td= link_to 'Visualizar', chart
         td= link_to 'Editar', edit_chart_path(chart)
         td= link_to 'Apagar', chart, data: { confirm: 'Tem certeza?' }, method: :delete
 
 br
 
-= link_to 'Novo mapa', new_chart_path
+= link_to 'Novo mapa', new_chart_path, class: 'button'

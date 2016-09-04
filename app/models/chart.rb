@@ -5,6 +5,66 @@ class Chart < ApplicationRecord
   store_accessor :birth_chart 
   before_save :calculate_numbers
 
+  def arrow_of_determination?
+    has_arrow_of_strength?(1, 5, 9)
+  end
+
+  def arrow_of_procrastination?
+    has_arrow_of_weakness?(1, 5, 9)
+  end
+
+  def arrow_of_spirituality?
+    has_arrow_of_strength?(3, 5, 7)
+  end
+
+  def arrow_of_enquirer?
+    has_arrow_of_weakness?(3, 5, 7)
+  end
+
+  def arrow_of_intelect?
+    has_arrow_of_strength?(3, 6, 9)
+  end
+
+  def arrow_of_poor_memory?
+    has_arrow_of_weakness?(3, 6, 9)
+  end
+
+  def arrow_of_emotional_balance?
+    has_arrow_of_strength?(2, 5, 8)
+  end
+
+  def arrow_of_hypersensitivity?
+    has_arrow_of_weakness?(2, 5, 8)
+  end
+
+  def arrow_of_practicality?
+    has_arrow_of_strength?(3, 6, 9)
+  end
+
+  def arrow_of_disorder?
+    has_arrow_of_weakness?(3, 6, 9)
+  end
+
+  def arrow_of_the_planner?
+    has_arrow_of_strength?(1, 2, 3)
+  end
+
+  def arrow_of_the_will?
+    has_arrow_of_strength?(4, 5, 6)
+  end
+
+  def arrow_of_frustration?
+    has_arrow_of_weakness?(4, 5, 6)
+  end
+
+  def arrow_of_activity?
+    has_arrow_of_strength?(7, 8, 9)
+  end
+
+  def arrow_of_passivity?
+    has_arrow_of_weakness?(7, 8, 9)
+  end
+
   def chart_number(number)
     numbers = []
     (self.birth_chart[number.to_s].to_i || 0).times do
@@ -14,6 +74,20 @@ class Chart < ApplicationRecord
   end
 
   private
+
+  def has_arrow_of_strength?(first, second, third)
+    self.birth_chart && 
+    self.birth_chart[first.to_s].to_i > 0 && 
+    self.birth_chart[second.to_s].to_i > 0 && 
+    self.birth_chart[third.to_s].to_i > 0
+  end
+
+  def has_arrow_of_weakness?(first, second, third)
+    self.birth_chart && 
+    self.birth_chart[first.to_s].to_i == 0 && 
+    self.birth_chart[second.to_s].to_i == 0 && 
+    self.birth_chart[third.to_s].to_i == 0
+  end
 
   def digits_sum(digits)
     return digits[0] if digits.size == 1
