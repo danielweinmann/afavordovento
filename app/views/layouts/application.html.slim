@@ -14,9 +14,10 @@ html lang="pt"
         .top-bar-left
           ul.menu
             = link_to root_path do
-              li.menu-text A favor do vento
+              li.menu-text
+                h4.gentium A favor do vento
         .top-bar-right
-          ul.menu
+          ul.menu.margin-top
             - if current_user
               li= link_to t('logout'), destroy_user_session_path, method: :delete
             - else
@@ -31,5 +32,4 @@ html lang="pt"
             - key = "alert" if ["failure", "error"].include?(key)
             .callout.text-center class="#{key}"
               = msg
-              a href="#" class="close-button" &times
         = yield
