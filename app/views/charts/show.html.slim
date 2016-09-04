@@ -38,11 +38,3 @@
     = render(partial: 'arrow', locals: {name: 'Arrow of frustration'}) if @chart.arrow_of_frustration?
     = render(partial: 'arrow', locals: {name: 'Arrow of activity'}) if @chart.arrow_of_activity?
     = render(partial: 'arrow', locals: {name: 'Arrow of passivity'}) if @chart.arrow_of_passivity?
-
-  br
-  br
-  br
-
-  = link_to 'Editar', edit_chart_path(@chart)
-  |  | 
-  = link_to 'Voltar', charts_path
