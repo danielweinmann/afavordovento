@@ -1,4 +1,32 @@
+@mixin transform($transforms)
+  -moz-transform: $transforms
+  -o-transform: $transforms
+  -ms-transform: $transforms
+  -webkit-transform: $transforms
+  transform: $transforms
+
+@mixin rotate($deg)
+  @include transform(rotate(#{$deg}deg))
+
+@mixin arrow
+  .line
+    position: absolute
+    border-top: 2px solid $dark-gray
+  .point
+    position: absolute
+    font-size: 2rem
+    color: $dark-gray
+    &:after
+      content: '➤'
+  .text
+    position: absolute
+    color: $dark-gray
+
 .birth-chart
+  position: relative
+  width: 700px
+  padding: 40px 200px
+  margin: 0 auto
   table
     width: auto
     tr
@@ -8,6 +36,8 @@
         height: 100px
         font-size: 2rem
         border: 1px solid $dark-gray
+        padding: 0
+        padding-left: 2px
         &:first-child
           border-left: none
         &:last-child
@@ -18,3 +48,131 @@
       &:last-child
         td
           border-bottom: none
+  .arrow-of-determination, .arrow-of-procrastination
+    @include arrow
+    .line
+      @include rotate(-45)
+      position: absolute
+      top: 146px
+      left: 266px
+      width: 380px
+      height: 300px
+    .point
+      @include rotate(-45)
+      top: 35px
+      left: 468px
+    .text
+      top: 40px
+      left: 520px
+  .arrow-of-spirituality, .arrow-of-the-enquirer
+    @include arrow
+    .line
+      @include rotate(45)
+      position: absolute
+      top: 146px
+      left: 56px
+      width: 380px
+      height: 300px
+    .point
+      @include rotate(45)
+      top: 298px
+      left: 468px
+    .text
+      top: 320px
+      left: 520px
+  .arrow-of-the-intellect, .arrow-of-poor-memory
+    @include arrow
+    .line
+      position: absolute
+      top: 89px
+      left: 216px
+      width: 268px
+      height: 300px
+    .point
+      top: 66px
+      left: 460px
+    .text
+      top: 78px
+      left: 520px
+  .arrow-of-emotional-balance, .arrow-of-hypersensitivity
+    @include arrow
+    .line
+      position: absolute
+      top: 189px
+      left: 216px
+      width: 268px
+      height: 300px
+    .point
+      top: 166px
+      left: 460px
+    .text
+      top: 178px
+      left: 520px
+  .arrow-of-practicality, .arrow-of-disorder
+    @include arrow
+    .line
+      position: absolute
+      top: 289px
+      left: 216px
+      width: 268px
+      height: 300px
+    .point
+      top: 266px
+      left: 460px
+    .text
+      top: 278px
+      left: 520px
+  .arrow-of-the-planner
+    @include arrow
+    .line
+      @include rotate(90)
+      position: absolute
+      top: 40px
+      left: -32px
+      width: 268px
+      height: 300px
+    .point
+      @include rotate(90)
+      top: 290px
+      left: 236px
+    .text
+      top: 360px
+      left: 110px
+  .arrow-of-the-will, .arrow-of-frustration
+    @include arrow
+    .line
+      @include rotate(90)
+      position: absolute
+      top: 40px
+      left: 68px
+      width: 268px
+      height: 300px
+    .point
+      @include rotate(90)
+      top: 290px
+      left: 336px
+    .text
+      top: 360px
+      left: 286px
+    &.arrow-of-frustration
+      .point
+        @include rotate(-90)
+        top: 44px
+      .text
+        top: 0px
+  .arrow-of-activity, .arrow-of-passivity
+    @include arrow
+    .line
+      @include rotate(90)
+      position: absolute
+      top: 40px
+      left: 168px
+      width: 268px
+      height: 300px
+    .point
+      @include rotate(-90)
+      top: 44px
+      left: 436px
+    .text
+      top: 0px
+      left: 448px

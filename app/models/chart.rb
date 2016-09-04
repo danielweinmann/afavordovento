@@ -17,11 +17,11 @@ class Chart < ApplicationRecord
     has_arrow_of_strength?(3, 5, 7)
   end
 
-  def arrow_of_enquirer?
+  def arrow_of_the_enquirer?
     has_arrow_of_weakness?(3, 5, 7)
   end
 
-  def arrow_of_intelect?
+  def arrow_of_the_intellect?
     has_arrow_of_strength?(3, 6, 9)
   end
 
@@ -38,11 +38,11 @@ class Chart < ApplicationRecord
   end
 
   def arrow_of_practicality?
-    has_arrow_of_strength?(3, 6, 9)
+    has_arrow_of_strength?(1, 4, 7)
   end
 
   def arrow_of_disorder?
-    has_arrow_of_weakness?(3, 6, 9)
+    has_arrow_of_weakness?(1, 4, 7)
   end
 
   def arrow_of_the_planner?
