@@ -1,28 +1,27 @@
-h1 Meus mapas
-
-- if @charts.empty?
-  h5 Você ainda não criou nenhum mapa. Que tal começar agora mesmo?
-- else
-  table
-    thead
-      tr
-        th= Chart.human_attribute_name(:name)
-        th= Chart.human_attribute_name(:birth_date)
-        th= Chart.human_attribute_name(:ruling_number)
-        th= Chart.human_attribute_name(:day_number)
-        th
-        th
-
-    tbody
-      - @charts.each do |chart|
+.text-center
+  h1 Meus mapas
+  br
+  - if @charts.empty?
+    h5 Você ainda não criou nenhum mapa. Que tal começar agora mesmo?
+  - else
+    table.text-left
+      thead
         tr
-          td= link_to chart.name, chart
-          td= l chart.birth_date
-          td= chart.ruling_number
-          td= chart.day_number
-          td= link_to 'Editar', edit_chart_path(chart)
-          td= link_to 'Apagar', chart, data: { confirm: 'Tem certeza?' }, method: :delete
+          th= Chart.human_attribute_name(:name)
+          th= Chart.human_attribute_name(:birth_date)
+          th= Chart.human_attribute_name(:ruling_number)
+          th= Chart.human_attribute_name(:day_number)
+          th
+          th
 
-br
-
-= link_to 'Novo mapa', new_chart_path, class: 'large button'
+      tbody
+        - @charts.each do |chart|
+          tr
+            td= link_to chart.name, chart
+            td= l chart.birth_date
+            td= chart.ruling_number
+            td= chart.day_number
+            td= link_to 'Editar', edit_chart_path(chart)
+            td= link_to 'Apagar', chart, data: { confirm: 'Tem certeza?' }, method: :delete
+  br
+  = link_to 'Novo mapa', new_chart_path, class: 'large button'

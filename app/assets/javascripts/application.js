@@ -18,5 +18,10 @@
 
 $(function(){ 
   $(document).foundation();
-  $(".content").css({ 'min-height': $('body').height() });
+  document.addEventListener("turbolinks:load", function() {
+    $(".content").css({ 'min-height': $('body').height() });
+  });
+  $(window).resize(function() {
+    $(".content").css({ 'min-height': $('body').height() });
+  });
 });

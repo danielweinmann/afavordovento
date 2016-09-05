@@ -12,20 +12,18 @@ html lang="pt"
     .row
       .columns.content
         - unless controller_name == 'pages' && action_name == 'show' && params[:id] == 'index'
-          .top-bar
-            .row
-              .top-bar-left
-                ul.menu
-                  = link_to (current_user ? charts_path : root_path) do
-                    li.menu-text
-                      h4.gentium A favor do vento
-              .top-bar-right
-                ul.menu.margin-top
-                  - if current_user
-                    li= link_to t('logout'), destroy_user_session_path, method: :delete
-                  - else
-                    li= link_to t('devise.shared.links.sign_up'), new_user_registration_path
-                    li= link_to t('devise.shared.links.sign_in'), new_user_session_path
+          .row.columns.margin-top
+            .float-left
+              = link_to (current_user ? charts_path : root_path) do
+                h4.gentium style="margin-left: 0.5rem;" A favor do vento
+            .float-right
+              ul.menu
+                - if current_user
+                  li= link_to t('logout'), destroy_user_session_path, method: :delete
+                - else
+                  li= link_to t('devise.shared.links.sign_up'), new_user_registration_path
+                  li= link_to t('devise.shared.links.sign_in'), new_user_session_path
+        br
         - for key, msg in flash
           - unless key == :timedout
             - key = "success" if key == "notice"
@@ -33,4 +31,5 @@ html lang="pt"
             br
             .callout.text-center class="#{key}"
               = msg
+            br
         = yield
