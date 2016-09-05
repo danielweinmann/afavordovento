@@ -1,0 +1,10 @@
+.text-center
+  br
+  br
+  h1.gentium A favor do vento
+  br
+  br
+  - if current_user
+    = link_to 'Meus mapas', charts_path, class: 'large button'
+  - else
+    = link_to 'Consulte seu mapa', new_chart_path, class: 'large button'
