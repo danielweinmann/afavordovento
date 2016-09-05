@@ -1,0 +1,2 @@
+class ChartPolicy < ApplicationPolicy
+end

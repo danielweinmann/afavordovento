@@ -12,10 +12,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
+gem 'pundit'
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-foundation-views'
 gem 'rails-i18n', '~> 5.0.0'
+gem 'high_voltage'
 
 group :development, :test do
   gem 'byebug', platform: :mri

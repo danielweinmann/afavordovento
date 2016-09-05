@@ -43,6 +43,7 @@
       destroy:
         notice: '%{resource_name} excluído com sucesso.'
         alert: '%{resource_name} não pôde ser excluído.'
+    not_authorized: 'Você não possui as permissões necessárias para realizar esta ação.'
   arrows:
     arrow_of_determination: Seta da determinação
     arrow_of_procrastination: Seta da procrastinação
