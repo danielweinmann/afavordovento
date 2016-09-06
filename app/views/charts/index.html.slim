@@ -1,27 +1,39 @@
+- content_for :title do
+  = "Caminhe a favor do vento com a ajuda da numerologia"
 .text-center
-  h1 Meus mapas
-  br
-  - if @charts.empty?
-    h5 Você ainda não criou nenhum mapa. Que tal começar agora mesmo?
-  - else
-    table.text-left
-      thead
-        tr
-          th= Chart.human_attribute_name(:name)
-          th.hide-for-small-only= Chart.human_attribute_name(:birth_date)
-          th.hide-for-small-only= Chart.human_attribute_name(:ruling_number)
-          th.hide-for-small-only= Chart.human_attribute_name(:day_number)
-          th
-          th
-
-      tbody
-        - @charts.each do |chart|
+  - if current_user
+    h1 Meus mapas
+    br
+    - if @charts.empty?
+      h5 Você ainda não criou nenhum mapa. Que tal começar agora mesmo?
+    - else
+      table.text-left
+        thead
           tr
-            td= link_to chart.name, chart
-            td.hide-for-small-only= l chart.birth_date
-            td.hide-for-small-only= chart.ruling_number
-            td.hide-for-small-only= chart.day_number
-            td= link_to 'Editar', edit_chart_path(chart)
-            td= link_to 'Apagar', chart, data: { confirm: 'Tem certeza?' }, method: :delete
-  br
-  = link_to 'Novo mapa', new_chart_path, class: 'large button'
+            th= Chart.human_attribute_name(:name)
+            th.hide-for-small-only= Chart.human_attribute_name(:birth_date)
+            th.hide-for-small-only= Chart.human_attribute_name(:ruling_number)
+            th.hide-for-small-only= Chart.human_attribute_name(:day_number)
+            th
+            th
+
+        tbody
+          - @charts.each do |chart|
+            tr
+              td= link_to chart.name, chart
+              td.hide-for-small-only= l chart.birth_date
+              td.hide-for-small-only= chart.ruling_number
+              td.hide-for-small-only= chart.day_number
+              td= link_to 'Editar', edit_chart_path(chart)
+              td= link_to 'Apagar', chart, data: { confirm: 'Tem certeza?' }, method: :delete
+    br
+    = link_to 'Novo mapa', new_chart_path, class: 'large button'
+  - else
+    h1.huge.gentium A favor do vento
+    h2= content_for(:title)
+    br
+    br
+    = link_to 'Cadastre-se e crie seu mapa', new_user_registration_path, class: 'large button'
+    br
+    br
+    p.lead Já possui cadastro? #{ link_to 'Faça seu login', new_user_session_path}.

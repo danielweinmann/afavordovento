@@ -1,5 +1,5 @@
 class ChartsController < ApplicationController
-  before_action :authenticate_user!, except: []
+  before_action :authenticate_user!, except: [:index]
   before_action :set_chart, only: [:show, :edit, :update, :destroy]
   after_action :verify_authorized, except: %i[index]
   after_action :verify_policy_scoped, only: %i[index]
