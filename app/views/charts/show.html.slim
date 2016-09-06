@@ -3,14 +3,7 @@
 .text-center
   h1= content_for(:title)
   h2= l @chart.birth_date
-  h3= "#{Chart.human_attribute_name(:is_female)}: #{ @chart.is_female? ? "Feminino" : "Masculino" }"
-  h3= "#{Chart.human_attribute_name(:ruling_number)}: #{@chart.ruling_number}"
-  h3= "#{Chart.human_attribute_name(:day_number)}: #{@chart.day_number}"
-
   br
-  h2= Chart.human_attribute_name(:birth_chart)
-  br
-
   .birth-chart
     table.text-center
       tr
