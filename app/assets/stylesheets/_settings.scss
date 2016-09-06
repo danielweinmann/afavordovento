@@ -50,9 +50,9 @@ $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: $navy,
-  secondary: #777,
-  success: #3adb76,
-  warning: #ffae00,
+  secondary: $dark-beige,
+  success: #0aab46,
+  warning: $medium-beige,
   alert: #ec5840,
 );
 $light-gray: #e6e6e6;
@@ -261,12 +261,12 @@ $buttongroup-expand-max: 6;
 // -----------
 
 $callout-background: $white;
-$callout-background-fade: 85%;
-$callout-border: 1px solid rgba($black, 0.25);
-$callout-margin: 0 0 1rem 0;
+$callout-background-fade: 0%;
+$callout-border: 1px solid rgba($dark-beige, 0.25);
+$callout-margin: 1rem 0 3rem 0;
 $callout-padding: 1rem;
-$callout-font-color: $body-font-color;
-$callout-font-color-alt: $body-background;
+$callout-font-color: $white;
+$callout-font-color-alt: $black;
 $callout-radius: $global-radius;
 $callout-link-tint: 30%;
 
@@ -278,8 +278,8 @@ $closebutton-offset-horizontal: 1rem;
 $closebutton-offset-vertical: 0.5rem;
 $closebutton-size: 2em;
 $closebutton-lineheight: 1;
-$closebutton-color: $dark-gray;
-$closebutton-color-hover: $black;
+$closebutton-color: $white;
+$closebutton-color-hover: $light-gray;
 
 // 15. Drilldown
 // -------------

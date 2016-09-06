@@ -28,10 +28,8 @@ html lang="pt"
           - unless key == :timedout
             - key = "success" if key == "notice"
             - key = "alert" if ["failure", "error"].include?(key)
-            br
             div(class="callout text-center #{key}" data-closable)
               = msg
               button(class="close-button" aria-label="Fechar aviso" type="button" data-close)
                 span aria-hidden="true" &times;
-            br
         = yield
