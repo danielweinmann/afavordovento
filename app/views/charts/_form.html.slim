@@ -11,9 +11,9 @@
   = f.date_field :birth_date
   = f.label :is_female
   = f.radio_button :is_female, true, checked: @chart.is_female?
-  = f.label "Feminino"
+  label for="chart_is_female_true" Feminino
   = f.radio_button :is_female, false, checked: !@chart.is_female?
-  = f.label "Masculino"
+  label for="chart_is_female_false" Masculino
   br
   br
   .actions= f.submit class: 'large button'
