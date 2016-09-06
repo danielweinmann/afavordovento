@@ -1,2 +1,4 @@
-h1 Editar mapa
+- content_for :title do
+  = "Editar mapa"
+h1= content_for(:title)
 == render 'form'

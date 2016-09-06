@@ -16,4 +16,4 @@
   label for="chart_is_female_false" Masculino
   br
   br
-  .actions= f.submit class: 'large button'
+  .actions= f.submit (@chart.new_record? ? 'Novo mapa' : 'Atualizar mapa'), class: 'large button'

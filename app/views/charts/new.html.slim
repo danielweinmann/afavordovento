@@ -1,2 +1,4 @@
-h1= (current_user && !current_user.charts.empty? ? 'Novo mapa' : 'Crie seu mapa')
+- content_for :title do
+  = "Novo mapa"
+h1= content_for(:title)
 == render 'form'
