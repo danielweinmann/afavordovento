@@ -8,9 +8,9 @@
       thead
         tr
           th= Chart.human_attribute_name(:name)
-          th= Chart.human_attribute_name(:birth_date)
-          th= Chart.human_attribute_name(:ruling_number)
-          th= Chart.human_attribute_name(:day_number)
+          th.hide-for-small-only= Chart.human_attribute_name(:birth_date)
+          th.hide-for-small-only= Chart.human_attribute_name(:ruling_number)
+          th.hide-for-small-only= Chart.human_attribute_name(:day_number)
           th
           th
 
@@ -18,9 +18,9 @@
         - @charts.each do |chart|
           tr
             td= link_to chart.name, chart
-            td= l chart.birth_date
-            td= chart.ruling_number
-            td= chart.day_number
+            td.hide-for-small-only= l chart.birth_date
+            td.hide-for-small-only= chart.ruling_number
+            td.hide-for-small-only= chart.day_number
             td= link_to 'Editar', edit_chart_path(chart)
             td= link_to 'Apagar', chart, data: { confirm: 'Tem certeza?' }, method: :delete
   br

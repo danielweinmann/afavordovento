@@ -14,8 +14,8 @@ html lang="pt"
         - unless controller_name == 'pages' && action_name == 'show' && params[:id] == 'index'
           .row.columns.margin-top
             .float-left
-              = link_to (current_user ? charts_path : root_path) do
-                h4.gentium style="margin-left: 0.5rem;" A favor do vento
+              = link_to (current_user ? charts_path : root_path), class: 'no-decoration' do
+                h3.gentium style="margin-left: 0.5rem;" A favor do vento
             .float-right
               ul.menu
                 - if current_user

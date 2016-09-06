@@ -9,13 +9,19 @@
 .gentium
   font-family: 'Gentium Book Basic', serif
 
+.no-decoration
+  text-decoration: none
+
 .huge
   font-size: 72px
   @include breakpoint(small only)
     font-size: 36px
 
+.button
+  text-decoration: none
+
 .login-box
-  padding: 0
+  padding: 0 10px
   margin: 0 auto
   border: none
   background: $beige
@@ -51,9 +57,12 @@
 
 .birth-chart
   position: relative
+  margin: 0 auto
   width: 700px
   padding: 40px 200px
-  margin: 0 auto
+  @include breakpoint(small only)
+    width: 350px
+    padding: 20px 100px
   table
     width: auto
     tr
@@ -62,6 +71,10 @@
         width: 100px
         height: 100px
         font-size: 2rem
+        @include breakpoint(small only)
+          width: 50px
+          height: 50px
+          font-size: 1rem
         border: 1px solid $medium-beige
         padding: 0
         padding-left: 2px
@@ -84,13 +97,24 @@
       left: 266px
       width: 380px
       height: 300px
+      @include breakpoint(small only)
+        top: 73px
+        left: 133px
+        width: 190px
+        height: 150px
     .point
       @include rotate(-45)
       top: 35px
       left: 468px
+      @include breakpoint(small only)
+        top: 15px
+        left: 218px
     .text
       top: 40px
       left: 520px
+      @include breakpoint(small only)
+        top: 20px
+        left: 260px
   .arrow-of-spirituality, .arrow-of-the-enquirer
     @include arrow
     .line
