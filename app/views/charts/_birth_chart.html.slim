@@ -1,0 +1,29 @@
+.birth-chart
+  table.text-center
+    tr
+      td= @chart.chart_number(3)
+      td= @chart.chart_number(6)
+      td= @chart.chart_number(9)
+    tr
+      td= @chart.chart_number(2)
+      td= @chart.chart_number(5)
+      td= @chart.chart_number(8)
+    tr
+      td= @chart.chart_number(1)
+      td= @chart.chart_number(4)
+      td= @chart.chart_number(7)
+  = render(partial: 'arrow', locals: {name: 'Arrow of determination'}) if @chart.arrow_of_determination?
+  = render(partial: 'arrow', locals: {name: 'Arrow of procrastination'}) if @chart.arrow_of_procrastination?
+  = render(partial: 'arrow', locals: {name: 'Arrow of spirituality'}) if @chart.arrow_of_spirituality?
+  = render(partial: 'arrow', locals: {name: 'Arrow of the enquirer'}) if @chart.arrow_of_the_enquirer?
+  = render(partial: 'arrow', locals: {name: 'Arrow of the intellect'}) if @chart.arrow_of_the_intellect?
+  = render(partial: 'arrow', locals: {name: 'Arrow of poor memory'}) if @chart.arrow_of_poor_memory?
+  = render(partial: 'arrow', locals: {name: 'Arrow of emotional balance'}) if @chart.arrow_of_emotional_balance?
+  = render(partial: 'arrow', locals: {name: 'Arrow of hypersensitivity'}) if @chart.arrow_of_hypersensitivity?
+  = render(partial: 'arrow', locals: {name: 'Arrow of practicality'}) if @chart.arrow_of_practicality?
+  = render(partial: 'arrow', locals: {name: 'Arrow of disorder'}) if @chart.arrow_of_disorder?
+  = render(partial: 'arrow', locals: {name: 'Arrow of the planner'}) if @chart.arrow_of_the_planner?
+  = render(partial: 'arrow', locals: {name: 'Arrow of the will'}) if @chart.arrow_of_the_will?
+  = render(partial: 'arrow', locals: {name: 'Arrow of frustration'}) if @chart.arrow_of_frustration?
+  = render(partial: 'arrow', locals: {name: 'Arrow of activity'}) if @chart.arrow_of_activity?
+  = render(partial: 'arrow', locals: {name: 'Arrow of passivity'}) if @chart.arrow_of_passivity?
