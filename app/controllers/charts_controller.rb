@@ -6,7 +6,7 @@ class ChartsController < ApplicationController
 
   # GET /charts
   def index
-    @charts = policy_scope(Chart).all
+    @charts = policy_scope(Chart).order(:name).all
   end
 
   # GET /charts/1
