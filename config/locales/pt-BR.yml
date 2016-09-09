@@ -32,6 +32,8 @@
         birth_chart: Mapa do nascimento
         ruling_number: Número regente
         day_number: Número do dia
+        world_year_number: Número do ano para o mundo
+        personal_year_number: Número do ano pessoal
   flash:
     actions:
       create:

@@ -33,5 +33,9 @@
     = render(partial: 'arrow', locals: {name: 'Arrow of frustration'}) if @chart.arrow_of_frustration?
     = render(partial: 'arrow', locals: {name: 'Arrow of activity'}) if @chart.arrow_of_activity?
     = render(partial: 'arrow', locals: {name: 'Arrow of passivity'}) if @chart.arrow_of_passivity?
+  br
   h3= "#{Chart.human_attribute_name(:ruling_number)}: #{@chart.ruling_number}"
   h3= "#{Chart.human_attribute_name(:day_number)}: #{@chart.day_number}"
+  br
+  h3= "#{Chart.human_attribute_name(:world_year_number)}: #{@chart.world_year_number}"
+  h3= "#{Chart.human_attribute_name(:personal_year_number)}: #{@chart.personal_year_number}"

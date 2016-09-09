@@ -5,6 +5,16 @@ class Chart < ApplicationRecord
   store_accessor :birth_chart 
   before_save :calculate_numbers
 
+  def personal_year_number
+    digits = "#{self.birth_date.strftime("%d%m")}#{Time.now.strftime("%Y")}".scan(/\d/).map(&:to_i)
+    calculate_number(digits_sum(digits), single_digit: true)
+  end
+
+  def world_year_number
+    digits = Time.now.strftime("%Y").scan(/\d/).map(&:to_i)
+    calculate_number(digits_sum(digits), single_digit: true)
+  end
+
   def arrow_of_determination?
     has_arrow_of_strength?(1, 5, 9)
   end
@@ -89,18 +99,22 @@ class Chart < ApplicationRecord
     self.birth_chart[third.to_s].to_i == 0
   end
 
-  def digits_sum(digits)
+  def digits_sum(digits, options = {})
     return digits[0] if digits.size == 1
-    return 10 if digits == [1, 0]
-    return 11 if digits == [1, 1]
-    return 22 if digits == [2, 2]
+    if !options[:single_digit]
+      return 10 if digits == [1, 0]
+      return 11 if digits == [1, 1]
+      return 22 if digits == [2, 2]
+    end
     digits.inject(0){ |sum, x| sum + x }
   end
 
-  def calculate_number(number)
-    return number if number <= 11 || number == 22
+  def calculate_number(number, options = {})
+    if !options[:single_digit]
+      return number if number <= 11 || number == 22
+    end
     digits = number.to_s.scan(/\d/).map(&:to_i)
-    digits_sum(digits)
+    digits_sum(digits, options)
   end
 
   def calculate_chart(digits)
