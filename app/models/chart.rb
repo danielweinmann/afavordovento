@@ -101,12 +101,19 @@ class Chart < ApplicationRecord
 
   def digits_sum(digits, options = {})
     return digits[0] if digits.size == 1
-    if !options[:single_digit]
+    sum = digits.inject(0){ |sum, x| sum + x }
+    if options[:single_digit]
+      if sum > 9
+        digits_sum(sum.to_s.scan(/\d/).map(&:to_i), options)
+      else
+        sum
+      end
+    else
       return 10 if digits == [1, 0]
       return 11 if digits == [1, 1]
       return 22 if digits == [2, 2]
+      sum
     end
-    digits.inject(0){ |sum, x| sum + x }
   end
 
   def calculate_number(number, options = {})
@@ -114,7 +121,7 @@ class Chart < ApplicationRecord
       return number if number <= 11 || number == 22
     end
     digits = number.to_s.scan(/\d/).map(&:to_i)
-    digits_sum(digits, options)
+    digits_sum(digits, options.merge(aki: true))
   end
 
   def calculate_chart(digits)
