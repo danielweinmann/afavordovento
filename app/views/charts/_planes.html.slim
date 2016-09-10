@@ -1,0 +1,17 @@
+h3= t("planes.mind.title")
+p== t("planes.mind.description")
+h5== t("planes.mind.count", count: @chart.mind_plane)
+br
+
+h3= t("planes.soul.title")
+p== t("planes.soul.description")
+h5== t("planes.soul.count", count: @chart.soul_plane)
+br
+
+h3= t("planes.physical.title")
+p== t("planes.physical.description")
+h5== t("planes.physical.count", count: @chart.physical_plane)
+br
+
+h3= t("best_expression.title")
+p== t("best_expression.#{@chart.best_expression}")

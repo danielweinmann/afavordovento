@@ -5,6 +5,31 @@ class Chart < ApplicationRecord
   store_accessor :birth_chart 
   before_save :calculate_numbers
 
+  def mind_plane
+    @mind_plane ||= has_number?(3) + has_number?(6) + has_number?(9)
+  end
+
+  def soul_plane
+    @soul_plane ||= has_number?(2) + has_number?(5) + has_number?(8)
+  end
+
+  def physical_plane
+    @physical_plane ||= has_number?(1) + has_number?(4) + has_number?(7)
+  end
+
+  def best_expression
+    return @best_expression if @best_expression
+    maximum = 0
+    maximum = self.mind_plane if self.mind_plane > maximum
+    maximum = self.soul_plane if self.soul_plane > maximum
+    maximum = self.physical_plane if self.physical_plane > maximum
+    expressions = []
+    expressions << "mind" if self.mind_plane == maximum
+    expressions << "soul" if self.soul_plane == maximum
+    expressions << "physical" if self.physical_plane == maximum
+    @best_expression = expressions.join("_and_")
+  end
+
   def personal_year_number
     digits = "#{self.birth_date.strftime("%d%m")}#{Time.now.strftime("%Y")}".scan(/\d/).map(&:to_i)
     calculate_number(digits_sum(digits), single_digit: true)
@@ -122,6 +147,10 @@ class Chart < ApplicationRecord
     end
     digits = number.to_s.scan(/\d/).map(&:to_i)
     digits_sum(digits, options.merge(aki: true))
+  end
+
+  def has_number?(number)
+    (self.birth_chart[number.to_s] ? 1 : 0)
   end
 
   def calculate_chart(digits)

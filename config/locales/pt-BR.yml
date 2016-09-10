@@ -62,3 +62,39 @@
     arrow_of_frustration: Seta da frustração
     arrow_of_activity: Seta da atividade
     arrow_of_passivity: Seta da passividade
+  planes:
+    mind: 
+      title: "Plano da mente"
+      description: "O <em>Plano da mente</em> representa a cabeça humana, e é simbolicamente encontrado na linha superior do mapa do nascimento, através dos números 3, 6 e 9. Ele abrange a memória, o pensamento, a análise, a racionalização, a imaginação, a criação, a responsabilidade, a ambição e o idealismo."
+      count:
+        one: "Você possui <strong>1</strong> número distinto no plano da mente."
+        other: "Você possui <strong>%{count}</strong> números distintos no plano da mente."
+        zero: "Você não possui <strong>nenhum</strong> número distinto no plano da mente."
+    soul:
+      title: "Plano da alma"
+      description: "O <em>Plano da alma</em> representa o coração humano, e é simbolicamente encontrado na linha do meio do mapa do nascimento, através dos números 2, 5 e 8. Ele abrange a sensitividade, a intuição, o amor, a liberdade, as emoções positivas, a expressão artística, a idenpendência espiritual e a sabedoria."
+      count:
+        one: "Você possui <strong>1</strong> número distinto no plano da alma."
+        other: "Você possui <strong>%{count}</strong> números distintos no plano da alma."
+        zero: "Você não possui <strong>nenhum</strong> número distinto no plano da alma."
+    physical:
+      title: "Plano físico"
+      description: "O <em>Plano físico</em> representa o corpo humano, e é simbolicamente encontrado na linha de baixo do mapa do nascimento, através dos números 1, 4 e 7. Ele abrange a expressão verbal, a motivação, a linguagem corporal, a organização, a paciência, o materialismo e o aprendizado através da prática."
+      count:
+        one: "Você possui <strong>1</strong> número distinto no plano físico."
+        other: "Você possui <strong>%{count}</strong> números distintos no plano físico."
+        zero: "Você não possui <strong>nenhum</strong> número distinto no plano físico."
+  best_expression:
+    title: "Sua melhor expressão"
+    mind: "Sua melhor expressão é através do plano da mente."
+    soul: "Sua melhor expressão é através do plano da alma."
+    physical: "Sua melhor expressão é através do plano físico."
+    mind_and_soul: "Sua melhor expressão é através dos planos da mente e da alma."
+    mind_and_physical: "Sua melhor expressão é através do planos da mente e do plano físico."
+    soul_and_physical: "Sua melhor expressão é através do planos da alma e do plano físico."
+    mind_and_soul_and_physical: "Sua melhor expressão se encontra no equilíbrio entre os três aspectos do ser."
+  birth_chart:
+    one:
+      0:
+        title: ""
+      1: "Um "
