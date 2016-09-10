@@ -19,6 +19,7 @@
 $(function(){ 
   $(document).foundation();
   document.addEventListener("turbolinks:load", function() {
+    $(document).foundation();
     $(".content").css({ 'min-height': $('body').height() });
   });
   $(window).resize(function() {
