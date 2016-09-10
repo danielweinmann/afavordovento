@@ -5,6 +5,10 @@ class Chart < ApplicationRecord
   store_accessor :birth_chart 
   before_save :calculate_numbers
 
+  def to_param
+    "#{self.id}-#{self.name.parameterize}"
+  end
+
   def mind_plane
     @mind_plane ||= has_number?(3) + has_number?(6) + has_number?(9)
   end
@@ -28,6 +32,42 @@ class Chart < ApplicationRecord
     expressions << "soul" if self.soul_plane == maximum
     expressions << "physical" if self.physical_plane == maximum
     @best_expression = expressions.join("_and_")
+  end
+
+  def ones
+    self.birth_chart["1"] || 0
+  end
+
+  def twos
+    self.birth_chart["2"] || 0
+  end
+
+  def threes
+    self.birth_chart["3"] || 0
+  end
+
+  def fours
+    self.birth_chart["4"] || 0
+  end
+
+  def fives
+    self.birth_chart["5"] || 0
+  end
+
+  def sixes
+    self.birth_chart["6"] || 0
+  end
+
+  def sevens
+    self.birth_chart["7"] || 0
+  end
+
+  def eights
+    self.birth_chart["8"] || 0
+  end
+
+  def nines
+    self.birth_chart["9"] || 0
   end
 
   def personal_year_number

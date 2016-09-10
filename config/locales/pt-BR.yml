@@ -95,6 +95,185 @@
     mind_and_soul_and_physical: "Sua melhor expressão se encontra no equilíbrio entre os três aspectos do ser."
   birth_chart:
     one:
-      0:
-        title: ""
-      1: "Um "
+      title: "Número 1"
+      description: "O número 1 diz respeito à expressão do corpo físico nos termos de sua relação com o mundo exterior. Geralmente é uma indicação confiável do quanto (e como) cada pessoa reage às outras pessoas e às circunstâncias ao seu redor. Tende a indicar o grau de autocontrole pessoal - ou a falta dele. É a fundação da personalidade, representa o ego e como ele é expressado ou suprimido."
+      "0":
+        title: "Você não possui <strong>nenhum</strong> 1 no seu mapa"
+        description: "Pessoas que não possuem nenhum 1 no seu mapa devem desenvolver ao longo da vida as habilidades relacionadas ao número 1."
+      "1":
+        title: "Você possui <strong>um</strong> 1 no seu mapa"
+        description: "Pessoas que possuem alguma dificuldade na autoexpressão verbal. Isso não implica que elas não possam falar bem, mas sobretudo indica a dificuldade que elas possuem em dar explicações claras sobre seus próprios sentimentos.<br/><br/>Elas podem ser poderosas oradoras quando o assunto não envolve a expressão dos sentimentos pessoais, mas ficam aquém na hora de botar em palavras suas atitudes e condutas. Até que desenvolvam uma maestria de si mesmas - produto da maturidade e do entendimento - a autoexpressão não acontece facilmente para elas<br/><br/>Às vezes dizem intencionalmente o oposto do que acham, com a intenção de  machucar ou ofender como um mecanismo agressivo de autodefesa. Isso inevitavelmente compõe o problema inicial, levando até alguns argumentos assustadores. Precisam aprender a pensar antes de falar, e podem fazer isso tomando um controle consciente sobre suas atitudes ao invés de reagir diretamente ao momento. Assim como é difícil desfazer uma palavra dita, os sentimentos machucados são difíceis de emendar.<br/><br/>Dica: o cultivo de um diário pessoal, com a escrita das coisas que se sentiu, que se falou, que gostaria de ter falado, que preferia não ter dito é uma boa forma de superar essa limitação. Reler o que se escreveu no dia seguinte, de preferência em voz alta."
+      "2":
+        title: "Você possui <strong>dois</strong> 1's no seu mapa"
+        description: "Abençoadas com o dom da autoexpressão, as pessoas com dois 1's são as mais afortunadas. É uma característica valiosa no mapa do nascimento, que deve ser usada com sabedoria. Não se deve abusar dela com propósitos manipulativos. Além disso, é importante ter cuidado para não agir de forma intolerante em relação às pessoas que não são tão bem afortunadas, especialmente se você estiver envolvido amorosamente com alguém que não possua dois 1's.<br/><br/>A pessoa com dois 1's é frequentemente apta a ver os dois lados de uma situação ou argumento. Não é incomum que ela tome o partido do outro lado, no meio de uma discussão, se o outro lado lhe parecer mais válido. Isso dá a elas um largo alcance no entendimento das situações e das pessoas."
+      "3":
+        title: "Você possui <strong>três</strong> 1's no seu mapa"
+        description: "Existem dois tipos diferentes de expressão aqui. O tipo mais frequentemente encontrado é o das pessoas falantes, tagarelas, que é brilhante e interessante e gostam de estar envolvidas em muitas e variadas atividades. Elas geralmente acham a vida gratificante e buscam compartilhar essa alegria  com os outros.<br/><br/>O segundo tipo compreende a minoria que além dos três 1's, também não possui nenhum número no plano da alma. Eles geralmente são quietos, um tanto introspectivos e ocasionalmente tímidos, especialmente com estranhos. No entanto, eles tendem a se tornar irreverentes e falantes na companhia de amigos, quando se sentem relaxados. Essas pessoas acham que podem se expressar melhor através da escrita, onde seus pensamentos fluem mais livremente, desinibidos por sua sensibilidade aguda."
+      "4":
+        title: "Você possui <strong>quatro</strong> 1's no seu mapa"
+        description: "Pessoas com quatro 1's experimentam dificuldade com a expressão verbal e são, por isso, frequentemente mal entendidas. Contudo, a vida cedo ensina elas a esconderem o turmolino emocional com um sorriso - embora eles sofram muito interiormente. É importante que elas aprendam a liberar-se dessas emoções e a não se vincular demais a elas.<br/><br/>Fortemente egocêntricos, essas pessoas se identificam com aqueles com os quais dividem sentimentos profundos. Mas elas não verbalizam esses sentimentos com facilidade. Para sua felicidade pessoal, e para a felicidade daqueles que vivem ao seu redor, é importante para a pessoa com quatro 1's assumir o comando de suas emoções. Assim que elas relaxarem mais e aprimorarem sua autoconfiança, elas se sentirão menos inibidas e se tornarão mais livres para expressar mais do que suprimir seus sentimentos interiores."
+      "5":
+        title: "Você possui <strong>cinco</strong> 1's no seu mapa"
+        description: "Com cinco 1's no mapa do nascimento a supressão do ego é criada para se contrapor à dificuldade básica de expressão verbal. Jovens podem ser ainda mais tristes quando são mal compreendidos. Isto cria apatia, a qual aprofunda mais ainda a solidão. Eles podem se tornar de alguma forma obssessivos sobre sua aparência e ação, e frequentemente possuem muitos espelhos pela casa - os quais costumam cobrir, para que as pessoas não pensem que são egocêntricos. Ainda assim eles secretamente adoram olhar para si mesmos. Tal egoísmo e engano pode prontamente levar a desequilíbrios mentais.<br/><br/>Você pode ajudar crianças com múltiplos 1's a elevar sua consciência fazendo com que elas se envolvam com alguma forma de arte - escrita, pintura, cerâmica ou música, assim por diante. Isso se aplica a todas as crianças, independente da idade."
+      "6":
+        title: "Você possui <strong>seis</strong> 1's no seu mapa"
+        description: "Com seis 1's no mapa do nascimento a supressão do ego é criada para se contrapor à dificuldade básica de expressão verbal. Jovens podem ser ainda mais tristes quando são mal compreendidos. Isto cria apatia, a qual aprofunda mais ainda a solidão. Eles podem se tornar de alguma forma obssessivos sobre sua aparência e ação, e frequentemente possuem muitos espelhos pela casa - os quais costumam cobrir, para que as pessoas não pensem que são egocêntricos. Ainda assim eles secretamente adoram olhar para si mesmos. Tal egoísmo e engano pode prontamente levar a desequilíbrios mentais.<br/><br/>Você pode ajudar crianças com múltiplos 1's a elevar sua consciência fazendo com que elas se envolvam com alguma forma de arte - escrita, pintura, cerâmica ou música, assim por diante. Isso se aplica a todas as crianças, independente da idade."
+      "7":
+        title: "Você possui <strong>sete</strong> 1's no seu mapa"
+        description: "Com sete 1's no Mapa do nascimento a supressão do ego é criada para se contrapor à dificuldade básica de expressão verbal. Jovens podem ser ainda mais tristes quando são mal compreendidos. Isto cria apatia, a qual aprofunda mais ainda a solidão. Eles podem se tornar de alguma forma obssessivos sobre sua aparência e ação, e frequentemente possuem muitos espelhos pela casa - os quais costumam cobrir, para que as pessoas não pensem que são egocêntricos. Ainda assim eles secretamente adoram olhar para si mesmos. Tal egoísmo e engano pode prontamente levar a desequilíbrios mentais.<br/><br/>Você pode ajudar crianças com múltiplos 1's a elevar sua consciência fazendo com que elas se envolvam com alguma forma de arte - escrita, pintura, cerâmica ou música, assim por diante. Isso se aplica a todas as crianças, independente da idade.<br/><br/>A ocorrência de sete 1's em uma data de nascimento é extremamente rara, felizmente, aparecendo não mais que uma vez no século 20."
+    two:
+      title: "Número 2"
+      description: ""
+      "0":
+        title: "Você não possui <strong>nenhum</strong> 2 no seu mapa"
+        description: "Pessoas que não possuem nenhum 2 no seu mapa devem desenvolver ao longo da vida as habilidades relacionadas ao número 2."
+      "1":
+        title: "Você possui <strong>um</strong> 2 no seu mapa"
+        description: ""
+      "2":
+        title: "Você possui <strong>dois</strong> 2's no seu mapa"
+        description: ""
+      "3":
+        title: "Você possui <strong>três</strong> 2's no seu mapa"
+        description: ""
+      "4":
+        title: "Você possui <strong>quatro</strong> 2's no seu mapa"
+        description: ""
+      "5":
+        title: "Você possui <strong>cinco</strong> 2's no seu mapa"
+        description: ""
+      "6":
+        title: "Você possui <strong>seis</strong> 2's no seu mapa"
+        description: ""
+      "7":
+        title: "Você possui <strong>sete</strong> 2's no seu mapa"
+        description: ""
+    three:
+      title: "Número 3"
+      description: ""
+      "0":
+        title: "Você não possui <strong>nenhum</strong> 3 no seu mapa"
+        description: "Pessoas que não possuem nenhum 3 no seu mapa devem desenvolver ao longo da vida as habilidades relacionadas ao número 3."
+      "1":
+        title: "Você possui <strong>um</strong> 3 no seu mapa"
+        description: ""
+      "2":
+        title: "Você possui <strong>dois</strong> 3's no seu mapa"
+        description: ""
+      "3":
+        title: "Você possui <strong>três</strong> 3's no seu mapa"
+        description: ""
+      "4":
+        title: "Você possui <strong>quatro</strong> 3's no seu mapa"
+        description: ""
+    four:
+      title: "Número 4"
+      description: ""
+      "0":
+        title: "Você não possui <strong>nenhum</strong> 4 no seu mapa"
+        description: "Pessoas que não possuem nenhum 4 no seu mapa devem desenvolver ao longo da vida as habilidades relacionadas ao número 4."
+      "1":
+        title: "Você possui <strong>um</strong> 4 no seu mapa"
+        description: ""
+      "2":
+        title: "Você possui <strong>dois</strong> 4's no seu mapa"
+        description: ""
+      "3":
+        title: "Você possui <strong>três</strong> 4's no seu mapa"
+        description: ""
+      "4":
+        title: "Você possui <strong>quatro</strong> 4's no seu mapa"
+        description: ""
+    five:
+      title: "Número 5"
+      description: ""
+      "0":
+        title: "Você não possui <strong>nenhum</strong> 5 no seu mapa"
+        description: "Pessoas que não possuem nenhum 5 no seu mapa devem desenvolver ao longo da vida as habilidades relacionadas ao número 5."
+      "1":
+        title: "Você possui <strong>um</strong> 5 no seu mapa"
+        description: ""
+      "2":
+        title: "Você possui <strong>dois</strong> 5's no seu mapa"
+        description: ""
+      "3":
+        title: "Você possui <strong>três</strong> 5's no seu mapa"
+        description: ""
+      "4":
+        title: "Você possui <strong>quatro</strong> 5's no seu mapa"
+        description: ""
+    six:
+      title: "Número 6"
+      description: ""
+      "0":
+        title: "Você não possui <strong>nenhum</strong> 6 no seu mapa"
+        description: "Pessoas que não possuem nenhum 6 no seu mapa devem desenvolver ao longo da vida as habilidades relacionadas ao número 6."
+      "1":
+        title: "Você possui <strong>um</strong> 6 no seu mapa"
+        description: ""
+      "2":
+        title: "Você possui <strong>dois</strong> 6's no seu mapa"
+        description: ""
+      "3":
+        title: "Você possui <strong>três</strong> 6's no seu mapa"
+        description: ""
+      "4":
+        title: "Você possui <strong>quatro</strong> 6's no seu mapa"
+        description: ""
+    seven:
+      title: "Número 7"
+      description: ""
+      "0":
+        title: "Você não possui <strong>nenhum</strong> 7 no seu mapa"
+        description: "Pessoas que não possuem nenhum 7 no seu mapa devem desenvolver ao longo da vida as habilidades relacionadas ao número 7."
+      "1":
+        title: "Você possui <strong>um</strong> 7 no seu mapa"
+        description: ""
+      "2":
+        title: "Você possui <strong>dois</strong> 7's no seu mapa"
+        description: ""
+      "3":
+        title: "Você possui <strong>três</strong> 7's no seu mapa"
+        description: ""
+      "4":
+        title: "Você possui <strong>quatro</strong> 7's no seu mapa"
+        description: ""
+    eight:
+      title: "Número 8"
+      description: ""
+      "0":
+        title: "Você não possui <strong>nenhum</strong> 8 no seu mapa"
+        description: "Pessoas que não possuem nenhum 8 no seu mapa devem desenvolver ao longo da vida as habilidades relacionadas ao número 8."
+      "1":
+        title: "Você possui <strong>um</strong> 8 no seu mapa"
+        description: ""
+      "2":
+        title: "Você possui <strong>dois</strong> 8's no seu mapa"
+        description: ""
+      "3":
+        title: "Você possui <strong>três</strong> 8's no seu mapa"
+        description: ""
+      "4":
+        title: "Você possui <strong>quatro</strong> 8's no seu mapa"
+        description: ""
+    nine:
+      title: "Número 9"
+      description: ""
+      "0":
+        title: "Você não possui <strong>nenhum</strong> 9 no seu mapa"
+        description: "Pessoas que não possuem nenhum 9 no seu mapa devem desenvolver ao longo da vida as habilidades relacionadas ao número 9."
+      "1":
+        title: "Você possui <strong>um</strong> 9 no seu mapa"
+        description: ""
+      "2":
+        title: "Você possui <strong>dois</strong> 9's no seu mapa"
+        description: ""
+      "3":
+        title: "Você possui <strong>três</strong> 9's no seu mapa"
+        description: ""
+      "4":
+        title: "Você possui <strong>quatro</strong> 9's no seu mapa"
+        description: ""
+      "5":
+        title: "Você possui <strong>cinco</strong> 9's no seu mapa"
+        description: ""
