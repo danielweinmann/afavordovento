@@ -7,6 +7,9 @@
   = render "birth_chart"
   ul.accordion.text-left(data-accordion)
     li.accordion-item.is-active(data-accordion-item)
+      a.accordion-title href="#" Sobre o mapa do nascimento
+      .accordion-content(data-tab-content)= render "about"
+    li.accordion-item(data-accordion-item)
       a.accordion-title href="#" Os três aspectos do ser
       .accordion-content(data-tab-content)= render "planes"
     li.accordion-item(data-accordion-item)
