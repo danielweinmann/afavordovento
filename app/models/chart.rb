@@ -35,43 +35,43 @@ class Chart < ApplicationRecord
   end
 
   def ones
-    self.birth_chart["1"] || 0
+    self.birth_chart["1"].to_i || 0
   end
 
   def twos
-    self.birth_chart["2"] || 0
+    self.birth_chart["2"].to_i || 0
   end
 
   def threes
-    self.birth_chart["3"] || 0
+    self.birth_chart["3"].to_i || 0
   end
 
   def fours
-    self.birth_chart["4"] || 0
+    self.birth_chart["4"].to_i || 0
   end
 
   def fives
-    self.birth_chart["5"] || 0
+    self.birth_chart["5"].to_i || 0
   end
 
   def sixes
-    self.birth_chart["6"] || 0
+    self.birth_chart["6"].to_i || 0
   end
 
   def sevens
-    self.birth_chart["7"] || 0
+    self.birth_chart["7"].to_i || 0
   end
 
   def eights
-    self.birth_chart["8"] || 0
+    self.birth_chart["8"].to_i || 0
   end
 
   def nines
-    self.birth_chart["9"] || 0
+    self.birth_chart["9"].to_i || 0
   end
 
   def zeros
-    self.birth_chart["0"] || 0
+    self.birth_chart["0"].to_i || 0
   end
 
   def personal_year_number
