@@ -70,6 +70,10 @@ class Chart < ApplicationRecord
     self.birth_chart["9"] || 0
   end
 
+  def zeros
+    self.birth_chart["0"] || 0
+  end
+
   def personal_year_number
     digits = "#{self.birth_date.strftime("%d%m")}#{Time.now.strftime("%Y")}".scan(/\d/).map(&:to_i)
     calculate_number(digits_sum(digits), single_digit: true)
@@ -195,7 +199,8 @@ class Chart < ApplicationRecord
 
   def calculate_chart(digits)
     chart = {}
-    digits.each do |digit|
+    digits.each_with_index do |digit, index|
+      next if digit == 0 && [0, 2].include?(index)
       chart[digit] = (chart[digit] || 0) + 1
     end
     chart
