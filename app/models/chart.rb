@@ -9,69 +9,94 @@ class Chart < ApplicationRecord
     "#{self.id}-#{self.name.parameterize}"
   end
 
-  def mind_plane
-    @mind_plane ||= has_number?(3) + has_number?(6) + has_number?(9)
+  def mind_plane_total
+    @mind_plane_total ||= number_total(3) + number_total(6) + number_total(9)
   end
 
-  def soul_plane
-    @soul_plane ||= has_number?(2) + has_number?(5) + has_number?(8)
+  def soul_plane_total
+    @soul_plane_total ||= number_total(2) + number_total(5) + number_total(8)
   end
 
-  def physical_plane
-    @physical_plane ||= has_number?(1) + has_number?(4) + has_number?(7)
+  def physical_plane_total
+    @physical_plane_total ||= number_total(1) + number_total(4) + number_total(7)
   end
 
-  def best_expression
-    return @best_expression if @best_expression
+  def mind_plane_distribution
+    @mind_plane_distribution ||= has_number?(3) + has_number?(6) + has_number?(9)
+  end
+
+  def soul_plane_distribution
+    @soul_plane_distribution ||= has_number?(2) + has_number?(5) + has_number?(8)
+  end
+
+  def physical_plane_distribution
+    @physical_plane_distribution ||= has_number?(1) + has_number?(4) + has_number?(7)
+  end
+
+  def best_level_of_communication
+    return @best_level_of_communication if @best_level_of_communication
     maximum = 0
-    maximum = self.mind_plane if self.mind_plane > maximum
-    maximum = self.soul_plane if self.soul_plane > maximum
-    maximum = self.physical_plane if self.physical_plane > maximum
+    maximum = self.mind_plane_total if self.mind_plane_total > maximum
+    maximum = self.soul_plane_total if self.soul_plane_total > maximum
+    maximum = self.physical_plane_total if self.physical_plane_total > maximum
     expressions = []
-    expressions << "mind" if self.mind_plane == maximum
-    expressions << "soul" if self.soul_plane == maximum
-    expressions << "physical" if self.physical_plane == maximum
-    @best_expression = expressions.join("_and_")
+    expressions << "mind" if self.mind_plane_total == maximum
+    expressions << "soul" if self.soul_plane_total == maximum
+    expressions << "physical" if self.physical_plane_total == maximum
+    @best_level_of_communication = expressions.join("_and_")
+  end
+
+  def most_balanced_plane
+    return @most_balanced_plane if @most_balanced_plane
+    maximum = 0
+    maximum = self.mind_plane_distribution if self.mind_plane_distribution > maximum
+    maximum = self.soul_plane_distribution if self.soul_plane_distribution > maximum
+    maximum = self.physical_plane_distribution if self.physical_plane_distribution > maximum
+    expressions = []
+    expressions << "mind" if self.mind_plane_distribution == maximum
+    expressions << "soul" if self.soul_plane_distribution == maximum
+    expressions << "physical" if self.physical_plane_distribution == maximum
+    @most_balanced_plane = expressions.join("_and_")
   end
 
   def ones
-    self.birth_chart["1"].to_i || 0
+    number_total(1)
   end
 
   def twos
-    self.birth_chart["2"].to_i || 0
+    number_total(2)
   end
 
   def threes
-    self.birth_chart["3"].to_i || 0
+    number_total(3)
   end
 
   def fours
-    self.birth_chart["4"].to_i || 0
+    number_total(4)
   end
 
   def fives
-    self.birth_chart["5"].to_i || 0
+    number_total(5)
   end
 
   def sixes
-    self.birth_chart["6"].to_i || 0
+    number_total(6)
   end
 
   def sevens
-    self.birth_chart["7"].to_i || 0
+    number_total(7)
   end
 
   def eights
-    self.birth_chart["8"].to_i || 0
+    number_total(8)
   end
 
   def nines
-    self.birth_chart["9"].to_i || 0
+    number_total(9)
   end
 
   def zeros
-    self.birth_chart["0"].to_i || 0
+    number_total(0)
   end
 
   def personal_year_number
@@ -195,6 +220,10 @@ class Chart < ApplicationRecord
 
   def has_number?(number)
     (self.birth_chart[number.to_s] ? 1 : 0)
+  end
+
+  def number_total(number)
+    self.birth_chart[number.to_s].to_i
   end
 
   def calculate_chart(digits)

@@ -1,17 +1,29 @@
 h3= t("planes.mind.title")
 p== t("planes.mind.description")
-h5== t("planes.mind.count", count: @chart.mind_plane)
+h5
+  == t("planes.mind.total", count: @chart.mind_plane_total)
+  == t("planes.distribution", count: @chart.mind_plane_distribution)
 br
 
 h3= t("planes.soul.title")
 p== t("planes.soul.description")
-h5== t("planes.soul.count", count: @chart.soul_plane)
+h5
+  == t("planes.soul.total", count: @chart.soul_plane_total)
+  == t("planes.distribution", count: @chart.soul_plane_distribution)
 br
 
 h3= t("planes.physical.title")
 p== t("planes.physical.description")
-h5== t("planes.physical.count", count: @chart.physical_plane)
+h5
+  == t("planes.physical.total", count: @chart.physical_plane_total)
+  == t("planes.distribution", count: @chart.physical_plane_distribution)
 br
 
-h3= t("best_expression.title")
-p== t("best_expression.#{@chart.best_expression}")
+h3= t("most_balanced_plane.title")
+p== t("most_balanced_plane.description")
+h5== t("most_balanced_plane.#{@chart.most_balanced_plane}")
+br
+
+h3= t("best_level_of_communication.title")
+p== t("best_level_of_communication.description")
+h5== t("best_level_of_communication.#{@chart.best_level_of_communication}")
