@@ -250,3 +250,18 @@
       "5":
         title: "Você possui <strong>cinco</strong> 9's no seu mapa"
         description: ""
+    zero:
+      title: "Número 0"
+      description: ""
+      "1":
+        title: "Você possui <strong>um</strong> 0 no seu mapa"
+        description: ""
+      "2":
+        title: "Você possui <strong>dois</strong> 0's no seu mapa"
+        description: ""
+      "3":
+        title: "Você possui <strong>três</strong> 0's no seu mapa"
+        description: ""
+      "4":
+        title: "Você possui <strong>quatro</strong> 0's no seu mapa"
+        description: ""
