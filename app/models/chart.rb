@@ -196,7 +196,6 @@ class Chart < ApplicationRecord
   def calculate_chart(digits)
     chart = {}
     digits.each do |digit|
-      next if digit == 0
       chart[digit] = (chart[digit] || 0) + 1
     end
     chart
