@@ -1,0 +1,11 @@
+ul.accordion.text-left(data-accordion data-multi-expand="true" data-allow-all-closed="true")
+  li.accordion-item.is-active(data-accordion-item)
+    a.accordion-title href="#"= Chart.human_attribute_name(:ruling_number)
+    .accordion-content(data-tab-content)
+      h3= "#{Chart.human_attribute_name(:ruling_number)}: #{@chart.ruling_number}"
+  li.accordion-item.is-active(data-accordion-item)
+    a.accordion-title href="#"= Chart.human_attribute_name(:day_number)
+    .accordion-content(data-tab-content)
+      h3= "#{Chart.human_attribute_name(:day_number)}: #{@chart.day_number}"
+br
+a.button.large(data-select-tab href="#cycles") Descubra os ciclos da vida

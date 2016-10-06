@@ -41,6 +41,14 @@
 .accordion-title
   font-size: 1rem
   text-decoration: none
+  &[aria-selected]
+    color: $navy
+
+.tabs-title
+  a
+    text-decoration: none
+    &[aria-selected]
+      color: $navy
 
 @mixin transform($transforms)
   -moz-transform: $transforms

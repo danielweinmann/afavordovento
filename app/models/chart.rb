@@ -9,6 +9,21 @@ class Chart < ApplicationRecord
     "#{self.id}-#{self.name.parameterize}"
   end
 
+  def birth_chart_text
+    numbers = { "0" => "zero", "1" => "one", "2" => "two", "3" => "three", "4" => "four", "5" => "five", "6" => "six", "7" => "seven", "8" => "eight", "9" => "nine" }
+    expressions = []
+    self.birth_chart.sort_by{ |key, value| "#{("%02d" % (10 - value.to_i))}#{("%02d" % (key.to_i))}" }.to_h.each do |number, total|
+      if number == "1" && total == "3" && self.arrow_of_hypersensitivity?
+        expressions << I18n.t("birth_chart.one.3_with_hypersensitivity.short", default: I18n.t("birth_chart.one.3_with_hypersensitivity.short_#{self.is_female? ? 'female' : 'male'}"))
+      else
+        expressions << I18n.t("birth_chart.#{numbers[number]}.#{total}.short", default: I18n.t("birth_chart.#{numbers[number]}.#{total}.short_#{self.is_female? ? 'female' : 'male'}"))
+      end
+    end
+    first_expressions = expressions[0..expressions.size - 2]
+    last_expression = expressions[expressions.size - 1]
+    "Desde #{self.is_female? ? 'pequena' : 'pequeno'} você foi #{first_expressions.join(", ")} e #{last_expression}."
+  end
+
   def mind_plane_total
     @mind_plane_total ||= number_total(3) + number_total(6) + number_total(9)
   end

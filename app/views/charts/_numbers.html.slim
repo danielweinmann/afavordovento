@@ -1,7 +1,10 @@
 h3= t("birth_chart.one.title")
 p== t("birth_chart.one.description")
 h4== t("birth_chart.one.#{@chart.ones}.title")
-p== t("birth_chart.one.#{@chart.ones}.description", default: t("birth_chart.one.#{@chart.ones}.description_#{@chart.is_female? ? 'female' : 'male'}"))
+- if @chart.ones == 3 && @chart.arrow_of_hypersensitivity?
+  p== t("birth_chart.one.3_with_hypersensitivity.description", default: t("birth_chart.one.3_with_hypersensitivity.description_#{@chart.is_female? ? 'female' : 'male'}"))
+- else
+  p== t("birth_chart.one.#{@chart.ones}.description", default: t("birth_chart.one.#{@chart.ones}.description_#{@chart.is_female? ? 'female' : 'male'}"))
 br
 
 h3= t("birth_chart.two.title")

@@ -4,30 +4,30 @@
   h1= content_for(:title)
   h2= l @chart.birth_date
   br
-  = render "birth_chart"
-  ul.accordion.text-left(data-accordion data-multi-expand="true" data-allow-all-closed="true")
-    li.accordion-item.is-active(data-accordion-item)
-      a.accordion-title href="#" Sobre o mapa do nascimento
-      .accordion-content(data-tab-content)= render "about"
-    li.accordion-item.is-active(data-accordion-item)
-      a.accordion-title href="#" Os três aspectos do ser
-      .accordion-content(data-tab-content)= render "planes"
-    li.accordion-item.is-active(data-accordion-item)
-      a.accordion-title href="#" Os números do seu mapa do nascimento
-      .accordion-content(data-tab-content)= render "numbers"
-    li.accordion-item.is-active(data-accordion-item)
-      a.accordion-title href="#"= Chart.human_attribute_name(:ruling_number)
-      .accordion-content(data-tab-content)
-        h3= "#{Chart.human_attribute_name(:ruling_number)}: #{@chart.ruling_number}"
-    li.accordion-item.is-active(data-accordion-item)
-      a.accordion-title href="#"= Chart.human_attribute_name(:day_number)
-      .accordion-content(data-tab-content)
-        h3= "#{Chart.human_attribute_name(:day_number)}: #{@chart.day_number}"
-    li.accordion-item.is-active(data-accordion-item)
-      a.accordion-title href="#"= Chart.human_attribute_name(:world_year_number)
-      .accordion-content(data-tab-content)
-        h3= "#{Chart.human_attribute_name(:world_year_number)}: #{@chart.world_year_number}"
-    li.accordion-item.is-active(data-accordion-item)
-      a.accordion-title href="#"= Chart.human_attribute_name(:personal_year_number)
-      .accordion-content(data-tab-content)
-        h3= "#{Chart.human_attribute_name(:personal_year_number)}: #{@chart.personal_year_number}"
+  ul#chart-tabs.tabs(data-tabs)
+    li.tabs-title.is-active
+      a href="#start" aria-selected="true" Em poucas palavras
+    li.tabs-title
+      a href="#birth-chart" Como você veio ao mundo
+    li.tabs-title
+      a href="#mission" Sua missão
+    li.tabs-title
+      a href="#cycles" Os ciclos da vida
+    li.tabs-title
+      a href="#year"= "#{Time.now.strftime('%Y')} para você"
+    li.tabs-title
+      a href="#month"= "Seu mês de #{l(Time.now, format: '%B').downcase}"
+  br
+  .tabs-content data-tabs-content="chart-tabs"
+    #start.tabs-panel.is-active= render "start"
+    #birth-chart.tabs-panel= render "birth_chart"
+    #mission.tabs-panel= render "mission"
+    #cycles.tabs-panel= render "cycles"
+    #year.tabs-panel= render "year"
+    #month.tabs-panel= render "month"
+  br
+javascript:
+  $('[data-select-tab]').click(function(event) {
+    event.preventDefault();
+    $('#chart-tabs').foundation('selectTab', $(event.currentTarget).attr('href'));
+  });

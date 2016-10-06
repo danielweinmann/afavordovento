@@ -27,3 +27,17 @@
   = render(partial: 'arrow', locals: {name: 'Arrow of frustration'}) if @chart.arrow_of_frustration?
   = render(partial: 'arrow', locals: {name: 'Arrow of activity'}) if @chart.arrow_of_activity?
   = render(partial: 'arrow', locals: {name: 'Arrow of passivity'}) if @chart.arrow_of_passivity?
+ul.accordion.text-left(data-accordion data-multi-expand="true" data-allow-all-closed="true")
+  li.accordion-item(data-accordion-item)
+    a.accordion-title href="#" Os três aspectos do ser
+    .accordion-content(data-tab-content)= render "planes"
+  li.accordion-item(data-accordion-item)
+    a.accordion-title href="#" Os números do seu mapa do nascimento
+    .accordion-content(data-tab-content)= render "numbers"
+  li.accordion-item(data-accordion-item)
+    a.accordion-title href="#" As setas da sua individualidade
+    .accordion-content(data-tab-content)= render "arrows"
+br
+h4 Gostou de descobrir como você nasceu? Agora é hora de descobrir para que você veio ao mundo!
+br
+a.button.large(data-select-tab href="#mission") Conheça sua sua missão
