@@ -249,13 +249,13 @@
         description: "Pessoas que não possuem nenhum 6 no seu mapa devem desenvolver ao longo da vida as habilidades relacionadas ao número 6."
       "1":
         title: "Você possui <strong>um</strong> 6 no seu mapa"
-        short_female: "criativa e caseira"
-        short_male: "criativo e caseiro"
+        short_female: "criativa, com um gosto especial por sua casa"
+        short_male: "criativo, com um gosto especial por sua casa"
         description: ""
       "2":
         title: "Você possui <strong>dois</strong> 6's no seu mapa"
-        short_female: "criativa e caseira, acompanhada por uma tendência a se preocupar demais"
-        short_male: "criativo e caseiro, acompanhado por uma tendência a se preocupar demais"
+        short_female: "criativa, com um gosto especial por sua casa, acompanhada por uma tendência a se preocupar demais"
+        short_male: "criativo, com um gosto especial por sua casa, acompanhado por uma tendência a se preocupar demais"
         description: ""
       "3":
         title: "Você possui <strong>três</strong> 6's no seu mapa"
