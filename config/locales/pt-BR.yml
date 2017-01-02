@@ -26,21 +26,36 @@
         alert: '%{resource_name} não pôde ser excluído.'
     not_authorized: 'Você não possui as permissões necessárias para realizar esta ação.'
   arrows:
-    arrow_of_determination: Seta da determinação
-    arrow_of_procrastination: Seta da procrastinação
-    arrow_of_spirituality: Seta da espiritualidade
-    arrow_of_the_enquirer: Seta do inquisidor
-    arrow_of_the_intellect: Seta do intelecto
-    arrow_of_poor_memory: Seta da memória fraca
-    arrow_of_emotional_balance: Seta do equilíbrio emocional
-    arrow_of_hypersensitivity: Seta da hipersensitividade
-    arrow_of_practicality: Seta da praticidade
-    arrow_of_disorder: Seta da desordem
-    arrow_of_the_planner: Seta do planejador
-    arrow_of_the_will: Seta da vontade
-    arrow_of_frustration: Seta da frustração
-    arrow_of_activity: Seta da atividade
-    arrow_of_passivity: Seta da passividade
+    arrow_of_determination:
+      title: Seta da determinação
+    arrow_of_procrastination:
+      title: Seta da procrastinação
+    arrow_of_spirituality:
+      title: Seta da espiritualidade
+    arrow_of_the_enquirer:
+      title: Seta do inquisidor
+    arrow_of_the_intellect:
+      title: Seta do intelecto
+    arrow_of_poor_memory:
+      title: Seta da memória fraca
+    arrow_of_emotional_balance:
+      title: Seta do equilíbrio emocional
+    arrow_of_hypersensitivity:
+      title: Seta da hipersensitividade
+    arrow_of_practicality:
+      title: Seta da praticidade
+    arrow_of_disorder:
+      title: Seta da desordem
+    arrow_of_the_planner:
+      title: Seta do planejador
+    arrow_of_the_will:
+      title: Seta da vontade
+    arrow_of_frustration:
+      title: Seta da frustração
+    arrow_of_activity:
+      title: Seta da atividade
+    arrow_of_passivity:
+      title: Seta da passividade
   planes:
     distribution:
       one: "<strong>1</strong> casa distinta."
@@ -331,7 +346,7 @@
         description: ""
       "2":
         title: "Você possui <strong>dois</strong> 9's no seu mapa"
-        short: "idealista (até demais)"
+        short: "idealista até demais"
         description: ""
       "3":
         title: "Você possui <strong>três</strong> 9's no seu mapa"

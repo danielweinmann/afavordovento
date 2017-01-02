@@ -21,7 +21,12 @@ class Chart < ApplicationRecord
     end
     first_expressions = expressions[0..expressions.size - 2]
     last_expression = expressions[expressions.size - 1]
-    "Desde #{self.is_female? ? 'pequena' : 'pequeno'} você foi #{first_expressions.join(", ")} e #{last_expression}."
+    numbers_text = "Desde #{self.is_female? ? 'pequena' : 'pequeno'} você foi #{first_expressions.join(", ")} e #{last_expression}."
+    arrows_expressions = []
+    self.arrows.each_with_index do |arrow, index|
+      arrows_expressions << I18n.t("arrows.#{arrow}.short", default: I18n.t("arrows.#{arrow}.short_#{self.is_female? ? 'female' : 'male'}"))
+    end
+    numbers_text
   end
 
   def mind_plane_total
@@ -122,6 +127,16 @@ class Chart < ApplicationRecord
   def world_year_number
     digits = Time.now.strftime("%Y").scan(/\d/).map(&:to_i)
     calculate_number(digits_sum(digits), single_digit: true)
+  end
+
+  def arrows
+    return @arrows if @arrows
+    possible_arrows = ["arrow_of_determination", "arrow_of_procrastination", "arrow_of_spirituality", "arrow_of_the_enquirer", "arrow_of_the_intellect", "arrow_of_poor_memory", "arrow_of_emotional_balance", "arrow_of_hypersensitivity", "arrow_of_practicality", "arrow_of_disorder", "arrow_of_the_planner", "arrow_of_the_will", "arrow_of_frustration", "arrow_of_activity", "arrow_of_passivity"]
+    @arrows = []
+    possible_arrows.each do |arrow|
+      @arrows << arrow if self.send("#{arrow}?")
+    end
+    @arrows
   end
 
   def arrow_of_determination?

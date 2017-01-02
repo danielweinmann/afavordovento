@@ -1,4 +1,4 @@
-div class=(name.downcase.gsub(/\s/, '-'))
+div class=(arrow.gsub('_', '-'))
   .line
   .point
-  .text= t("arrows.#{name.downcase.gsub(/\s/, '_')}")
+  .text= t("arrows.#{arrow}.title")
